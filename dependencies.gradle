@@ -1,0 +1,28 @@
+ext {
+    //region Versions
+    versions = [
+            "androidxcore"       : "1.9.0",
+            "androidappcompat"   : "1.6.0",
+            "material"           : "1.8.0",
+            "constraintlayout"   : "2.1.4",
+            "junit"              : "4.13.2",
+            "androidtest"        : "1.1.5",
+            "androidtestexpresso": "3.5.1",
+    ]
+    //endregion
+
+    //region Dependencies
+    androidxDependencies = [
+            "core"            : "androidx.core:core-ktx:$versions.androidxcore",
+            "appcompat"       : "androidx.appcompat:appcompat:$versions.androidappcompat",
+            "material"        : "com.google.android.material:material:$versions.material",
+            "constraintlayout": "androidx.constraintlayout:constraintlayout:$versions.constraintlayout",
+    ]
+
+    androidTestDependencies = [
+            "junit"          : "junit:junit:$versions.junit",
+            "androidJunit"   : "androidx.test.ext:junit:$versions.androidtest",
+            "androidexpresso": "androidx.test.espresso:espresso-core:$versions.androidtestexpresso",
+    ]
+    //endregion
+}
