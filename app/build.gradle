@@ -35,12 +35,12 @@ android {
 }
 
 dependencies {
-
     implementation androidxDependencies.core
     implementation androidxDependencies.appcompat
     implementation androidxDependencies.material
     implementation androidxDependencies.constraintlayout
 
+    implementation koinDependencies.koin
 
     testImplementation androidTestDependencies.junit
     androidTestImplementation androidTestDependencies.androidJunit

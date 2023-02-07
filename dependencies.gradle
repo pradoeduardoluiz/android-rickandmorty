@@ -8,6 +8,7 @@ ext {
             "junit"              : "4.13.2",
             "androidtest"        : "1.1.5",
             "androidtestexpresso": "3.5.1",
+            "koin"               : "3.3.2",
     ]
     //endregion
 
@@ -17,6 +18,10 @@ ext {
             "appcompat"       : "androidx.appcompat:appcompat:$versions.androidappcompat",
             "material"        : "com.google.android.material:material:$versions.material",
             "constraintlayout": "androidx.constraintlayout:constraintlayout:$versions.constraintlayout",
+    ]
+
+    koinDependencies = [
+            "koin": "io.insert-koin:koin-android:$versions.koin"
     ]
 
     androidTestDependencies = [
