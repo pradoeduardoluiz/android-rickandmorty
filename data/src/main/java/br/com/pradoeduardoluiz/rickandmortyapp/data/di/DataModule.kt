@@ -1,6 +1,6 @@
 package br.com.pradoeduardoluiz.rickandmortyapp.data.di
 
-import NetworkApi
+import br.com.pradoeduardoluiz.rickandmortyapp.data.NetworkApi
 import org.koin.dsl.module
 
 val dataModule = module {

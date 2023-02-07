@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 apply from: "../dependencies.gradle"
@@ -40,5 +41,8 @@ dependencies {
     implementation squareDependencies.converter_moshi
     implementation squareDependencies.moshi
 
+    kapt 'com.squareup.moshi:moshi-kotlin-codegen:1.13.0'
+
     testImplementation androidTestDependencies.junit
+    testImplementation squareDependencies.mockwebserver
 }
