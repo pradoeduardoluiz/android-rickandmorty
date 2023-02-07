@@ -1,22 +1,20 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
 apply from: "../dependencies.gradle"
 
 android {
-    namespace 'br.com.pradoeduardoluiz.rickandmortyapp'
+    namespace 'br.com.pradoeduardoluiz.rickandmortyapp.data'
     compileSdk 33
 
     defaultConfig {
-        applicationId "br.com.pradoeduardoluiz.rickandmortyapp"
         minSdk 23
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -35,22 +33,12 @@ android {
 }
 
 dependencies {
-    //region Project dependencies
-    implementation project(":data")
-    //endregion
-
-    //region Libraries dependencies
-    implementation androidxDependencies.core
-    implementation androidxDependencies.appcompat
-    implementation androidxDependencies.material
-    implementation androidxDependencies.constraintlayout
 
     implementation koinDependencies.koin
-    //endregion
+    implementation squareDependencies.retrofit
+    implementation squareDependencies.logging_interceptor
+    implementation squareDependencies.converter_moshi
+    implementation squareDependencies.moshi
 
-    //region Test Libraries dependencies
     testImplementation androidTestDependencies.junit
-    androidTestImplementation androidTestDependencies.androidJunit
-    androidTestImplementation androidTestDependencies.androidexpresso
-    //endregion
 }

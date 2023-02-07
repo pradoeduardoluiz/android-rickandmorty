@@ -1,6 +1,7 @@
 package br.com.pradoeduardoluiz.rickandmortyapp
 
 import android.app.Application
+import br.com.pradoeduardoluiz.rickandmortyapp.data.di.dataModule
 import br.com.pradoeduardoluiz.rickandmortyapp.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -17,6 +18,5 @@ class RickAndMortyApplication : Application() {
         }
     }
 
-    private val modules = listOf(appModule)
-
+    private val modules = listOf(appModule, dataModule)
 }

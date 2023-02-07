@@ -9,6 +9,9 @@ ext {
             "androidtest"        : "1.1.5",
             "androidtestexpresso": "3.5.1",
             "koin"               : "3.3.2",
+            "retrofit"           : "2.9.0",
+            "moshi"              : "1.14.0",
+            "loggingInterceptor" : "4.10.0"
     ]
     //endregion
 
@@ -22,6 +25,13 @@ ext {
 
     koinDependencies = [
             "koin": "io.insert-koin:koin-android:$versions.koin"
+    ]
+
+    squareDependencies = [
+            "retrofit"           : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+            "converter_moshi"    : "com.squareup.retrofit2:converter-moshi:$versions.retrofit",
+            "moshi"              : "com.squareup.moshi:moshi-kotlin:$versions.moshi",
+            "logging_interceptor": "com.squareup.okhttp3:logging-interceptor:$versions.loggingInterceptor"
     ]
 
     androidTestDependencies = [
