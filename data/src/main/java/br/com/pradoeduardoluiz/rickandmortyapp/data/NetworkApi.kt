@@ -1,5 +1,6 @@
 package br.com.pradoeduardoluiz.rickandmortyapp.data
 
+import br.com.pradoeduardoluiz.rickandmortyapp.data.remote.CharacterService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -26,5 +27,7 @@ internal object NetworkApi {
     }
 
     fun provideConverterFactory(): MoshiConverterFactory = MoshiConverterFactory.create()
+
+    fun providerCharacterService(retrofit: Retrofit): CharacterService = retrofit.create(CharacterService::class.java)
 
 }

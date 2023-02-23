@@ -1,13 +1,12 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
 }
 
 apply from: "../dependencies.gradle"
 
 android {
-    namespace 'br.com.pradoeduardoluiz.rickandmortyapp.data'
+    namespace 'br.com.pradoeduardoluiz.rickandmortyapp.domain'
     compileSdk 33
 
     defaultConfig {
@@ -35,16 +34,9 @@ android {
 
 dependencies {
 
-    implementation project(':domain')
     implementation koinDependencies.koin
-    implementation squareDependencies.retrofit
-    implementation squareDependencies.logging_interceptor
-    implementation squareDependencies.converter_moshi
-    implementation squareDependencies.moshi
-
-    kapt 'com.squareup.moshi:moshi-kotlin-codegen:1.13.0'
 
     testImplementation androidTestDependencies.junit
     testImplementation androidTestDependencies.mockk
-    testImplementation squareDependencies.mockwebserver
+
 }

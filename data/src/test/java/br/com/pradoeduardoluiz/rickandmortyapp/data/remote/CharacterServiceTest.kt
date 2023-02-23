@@ -80,7 +80,7 @@ class CharacterServiceTest {
         )
 
         val service: CharacterService = retrofit.create(CharacterService::class.java)
-        val actual = service.getCharacters()
+        val actual = service.getCharacters(page = 1)
         assertEquals(expected, actual)
     }
 }

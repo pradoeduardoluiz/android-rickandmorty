@@ -12,7 +12,8 @@ ext {
             "retrofit"           : "2.9.0",
             "moshi"              : "1.14.0",
             "loggingInterceptor" : "4.10.0",
-            "mockwebserver"      : "4.10.0"
+            "mockwebserver"      : "4.10.0",
+            "mockk"              : "1.13.4"
     ]
     //endregion
 
@@ -38,6 +39,7 @@ ext {
 
     androidTestDependencies = [
             "junit"          : "junit:junit:$versions.junit",
+            "mockk"          : "io.mockk:mockk:$versions.mockk",
             "androidJunit"   : "androidx.test.ext:junit:$versions.androidtest",
             "androidexpresso": "androidx.test.espresso:espresso-core:$versions.androidtestexpresso",
     ]
